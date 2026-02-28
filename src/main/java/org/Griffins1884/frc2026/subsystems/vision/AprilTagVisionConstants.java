@@ -95,7 +95,7 @@ public final class AprilTagVisionConstants {
       switch (ROBOT) {
         case DEVBOT ->
             new VisionIO.CameraConstants(
-                (IS_LIMELIGHT) ? "limelight-middle-right" : "middlerighttagcam",
+                (IS_LIMELIGHT) ? "limelight-side" : "middlerighttagcam",
                 new Transform3d(
                     0.290868,
                     0.288922,
