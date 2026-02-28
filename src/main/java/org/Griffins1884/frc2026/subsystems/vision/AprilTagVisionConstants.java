@@ -105,7 +105,7 @@ public final class AprilTagVisionConstants {
                 getPrimaryCameraType());
         case COMPBOT ->
             new VisionIO.CameraConstants(
-                (IS_LIMELIGHT) ? "limelight-middle-right" : "middlerighttagcam",
+                (IS_LIMELIGHT) ? "limelight-side" : "middlerighttagcam",
                 new Transform3d(
                     -0.0083312,
                     0.324028,
