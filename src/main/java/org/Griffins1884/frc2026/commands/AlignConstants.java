@@ -53,7 +53,7 @@ public final class AlignConstants {
   public static final LoggedTunableNumber AFTER_COLLECT_START_HEADING_DEG =
       new LoggedTunableNumber("Align/AfterCollectStart/HeadingDeg", 220.0);
   public static final LoggedTunableNumber TURRET_KV =
-      new LoggedTunableNumber("Turret/AutoAim/kV", 1.27);
+      new LoggedTunableNumber("Turret/AutoAim/kV", 1.22);
   public static final LoggedTunableNumber TURRET_KS =
       new LoggedTunableNumber("Turret/AutoAim/kS", -0.005);
   public static final LoggedTunableNumber TURRET_BASE_LATENCY_SECONDS =
@@ -77,7 +77,7 @@ public final class AlignConstants {
   public static final LoggedTunableNumber AFTER_SECOND_BUMP_START_Y_METERS =
       new LoggedTunableNumber("Align/AfterSecondBump/YMeters", 4);
   public static final LoggedTunableNumber AFTER_SECOND_BUMP_START_HEADING_DEG =
-      new LoggedTunableNumber("Align/AfterSecondBump/HeadingDeg", 180);
+      new LoggedTunableNumber("Align/AfterSecondBump/HeadingDeg", 0);
 
   public static final LoggedTunableNumber AFTER_BUMP_TO_NEUTRAL_START_X_METERS =
       new LoggedTunableNumber("Align/AfterBumpToNeutral/XMeters", 6);
@@ -87,11 +87,11 @@ public final class AlignConstants {
       new LoggedTunableNumber("Align/AfterBumpToNeutral/HeadingDeg", 320);
 
   public static final LoggedTunableNumber AFTER_BUMP_RIGHT_TO_NEUTRAL_START_X_METERS =
-          new LoggedTunableNumber("Align/AfterBumpRightToNeutral/XMeters", 6.4);
+      new LoggedTunableNumber("Align/AfterBumpRightToNeutral/XMeters", 6.4);
   public static final LoggedTunableNumber AFTER_BUMP_RIGHT_TO_NEUTRAL_START_Y_METERS =
-          new LoggedTunableNumber("Align/AfterBumpRightToNeutral/YMeters", 2.4);
+      new LoggedTunableNumber("Align/AfterBumpRightToNeutral/YMeters", 2.4);
   public static final LoggedTunableNumber AFTER_BUMP_RIGHT_TO_NEUTRAL_START_HEADING_DEG =
-          new LoggedTunableNumber("Align/AfterBumpRightToNeutral/HeadingDeg", 140);
+      new LoggedTunableNumber("Align/AfterBumpRightToNeutral/HeadingDeg", 140);
 
   public static AlignGains getAlignGains() {
     return new AlignGains(
@@ -111,8 +111,10 @@ public final class AlignConstants {
 
   public static Pose2d getAfterBumpRightToNeutralStartPose() {
     return new Pose2d(
-            new Translation2d(AFTER_BUMP_RIGHT_TO_NEUTRAL_START_X_METERS.get(), AFTER_BUMP_RIGHT_TO_NEUTRAL_START_Y_METERS.get()),
-            Rotation2d.fromDegrees(AFTER_BUMP_RIGHT_TO_NEUTRAL_START_HEADING_DEG.get()));
+        new Translation2d(
+            AFTER_BUMP_RIGHT_TO_NEUTRAL_START_X_METERS.get(),
+            AFTER_BUMP_RIGHT_TO_NEUTRAL_START_Y_METERS.get()),
+        Rotation2d.fromDegrees(AFTER_BUMP_RIGHT_TO_NEUTRAL_START_HEADING_DEG.get()));
   }
 
   public static Pose2d getAfterOverBumpStartPose() {

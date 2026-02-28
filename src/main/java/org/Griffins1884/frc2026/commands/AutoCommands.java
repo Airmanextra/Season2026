@@ -30,10 +30,10 @@ public class AutoCommands {
             DriveCommands.alignToAfterBumpStartCommand(drive)));
 
     NamedCommands.registerCommand(
-            "RightToNeutral",
-            Commands.sequence(
-                    superstructure.setSuperStateCmd(Superstructure.SuperState.IDLING),
-                    DriveCommands.alignToAfterBumpRightToNeutralCommand(drive)));
+        "RightToNeutral",
+        Commands.sequence(
+            superstructure.setSuperStateCmd(Superstructure.SuperState.IDLING),
+            DriveCommands.alignToAfterBumpRightToNeutralCommand(drive)));
 
     NamedCommands.registerCommand(
         "BumpToNeutral",
@@ -45,11 +45,10 @@ public class AutoCommands {
         "Collect",
         Commands.sequence(
             superstructure.setSuperStateCmd(Superstructure.SuperState.INTAKING),
-            AutoAlignToFuelCommand.alignToFuelCommand(drive),
             DriveCommands.alignToAfterCollectStartCommand(drive)));
 
     NamedCommands.registerCommand(
-            "LeftStraightBumpAlign", DriveCommands.alignToAfterCollectStartCommand(drive));
+        "LeftStraightBumpAlign", DriveCommands.alignToAfterCollectStartCommand(drive));
 
     NamedCommands.registerCommand(
         "Intake", superstructure.setSuperStateCmd(Superstructure.SuperState.INTAKING));

@@ -17,6 +17,12 @@
           }
         },
         {
+          "type": "named",
+          "data": {
+            "name": "Intake"
+          }
+        },
+        {
           "type": "path",
           "data": {
             "pathName": "Collect"
@@ -25,7 +31,7 @@
         {
           "type": "named",
           "data": {
-            "name": "Collect"
+            "name": "Intake"
           }
         }
       ]

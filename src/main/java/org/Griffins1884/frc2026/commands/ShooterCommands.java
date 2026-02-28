@@ -13,6 +13,7 @@ import org.Griffins1884.frc2026.subsystems.Superstructure;
 import org.Griffins1884.frc2026.subsystems.shooter.ShooterConstants;
 import org.Griffins1884.frc2026.subsystems.shooter.ShooterPivotConstants;
 import org.Griffins1884.frc2026.subsystems.shooter.ShooterPivotSubsystem;
+import org.littletonrobotics.junction.Logger;
 
 public class ShooterCommands {
   private static final double GRAVITY = 9.80665;
@@ -71,6 +72,8 @@ public class ShooterCommands {
 
     distance =
         (double) Math.round(Math.hypot(Math.abs(distanceX), Math.abs(distanceY)) * 100) / 100;
+
+    Logger.recordOutput("Shooter/distanceee", distance);
 
     return dataPack(distance, state);
   }
@@ -202,23 +205,23 @@ public class ShooterCommands {
     table.put(4.0, 3490.0);
     table.put(4.1, 3510.0);
     table.put(4.2, 3540.0);
-    table.put(4.3, 3580.0);
-    table.put(4.4, 3580.0);
-    table.put(4.5, 3660.0);
-    table.put(4.6, 3690.0);
-    table.put(4.7, 3730.0);
-    table.put(4.8, 3790.0);
-    table.put(4.9, 3810.0);
-    table.put(5.0, 3850.0);
-    table.put(5.1, 3890.0);
-    table.put(5.2, 3930.0);
-    table.put(5.3, 3970.0);
-    table.put(5.4, 4090.0);
-    table.put(5.5, 4110.0);
-    table.put(5.6, 4130.0);
-    table.put(5.7, 4170.0);
-    table.put(5.8, 4190.0);
-    table.put(5.9, 4250.0);
+    table.put(4.3, 3620.0);
+    table.put(4.4, 3620.0);
+    table.put(4.5, 3700.0);
+    table.put(4.6, 3730.0);
+    table.put(4.7, 3770.0);
+    table.put(4.8, 3830.0);
+    table.put(4.9, 3850.0);
+    table.put(5.0, 3890.0);
+    table.put(5.1, 3930.0);
+    table.put(5.2, 3970.0);
+    table.put(5.3, 4010.0);
+    table.put(5.4, 4130.0);
+    table.put(5.5, 4150.0);
+    table.put(5.6, 4170.0);
+    table.put(5.7, 4210.0);
+    table.put(5.8, 4230.0);
+    table.put(5.9, 4290.0);
     return table;
   }
 

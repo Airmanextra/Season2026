@@ -219,13 +219,13 @@ public class DriveCommands {
   }
 
   public static Command alignToAfterBumpRightToNeutralCommand(SwerveSubsystem drive) {
-      return Commands.defer(
-      () -> {
+    return Commands.defer(
+        () -> {
           Pose2d target = AlignConstants.getAfterBumpRightToNeutralStartPose();
           Logger.recordOutput("Autonomy/AlignTargetAfterBumpRightToNeutralStart", target);
           return new AutoAlignToPoseCommand(drive, target);
-      },
-              Set.of(drive));
+        },
+        Set.of(drive));
   }
 
   /**
